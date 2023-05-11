@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>wealthMoneyHubAPIMock</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Used to provide permissions to users for MoneyHub integration</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>WealthMoneyHub</label>
+</PermissionSet>
