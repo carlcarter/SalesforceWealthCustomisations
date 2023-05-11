@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Professional_Designations__c</fullName>
+    <description>List of the advisor&apos;s professional designations</description>
+    <externalId>false</externalId>
+    <label>Professional Designations</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chartered Financial Analyst (CFA)</fullName>
+                <default>false</default>
+                <label>Chartered Financial Analyst (CFA)</label>
+            </value>
+            <value>
+                <fullName>Certified Financial Planner (CFP)</fullName>
+                <default>false</default>
+                <label>Certified Financial Planner (CFP)</label>
+            </value>
+            <value>
+                <fullName>Certified Private Wealth Advisor (CPWA)</fullName>
+                <default>false</default>
+                <label>Certified Private Wealth Advisor (CPWA)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

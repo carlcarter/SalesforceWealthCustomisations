@@ -1,0 +1,75 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-layout multiple-rows="true" horizontal-align={horizontalAlign}>
+            <template for:each={wealthAdvisors} for:item="advisor">
+                <lightning-layout-item key={advisor.Id} size={advisorColumnSize} padding="around-small" class="advisor-column">
+                    <lightning-layout multiple-rows="false" horizontal-align={horizontalAlign}>
+                        <lightning-layout-item size="4" padding="around-small">
+                            <img src={advisor.Photo_URL__c} alt="Advisor Photo" class="advisor-photo"/>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="8" padding="around-small">
+                            <div class="slds-text-heading_large slds-m-vertical_x-small">{advisor.Name}</div>
+                                <div class="slds-m-top_xx-small"><b>Years of Experience:</b> {advisor.Years_of_Experience__c}</div>
+                                <div class="slds-m-top_xx-small"><b>Investment Philosophy:</b> {advisor.Investment_Philosophy__c}</div>
+                                <div class="slds-m-top_xx-small"><b>Designations:</b></div>
+                                <div class="slds-m-top_xx-small">
+                                    <template for:each={advisor.designationsArray} for:item="designation">
+                                        <span key={designation} class="slds-badge slds-var-m-bottom_x-small">{designation}</span>
+                                    </template>
+                                </div>
+                                <button class="slds-button slds-button_brand slds-m-top_small" data-id={advisor.Id} onclick={handleSeeMore}>
+                                    See more
+                                </button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+
+        <!-- After the closing </lightning-layout> tag -->
+        <template if:true={selectedAdvisor}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{selectedAdvisor.Name}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-layout multiple-rows="false" horizontal-align={horizontalAlign}>
+                            <lightning-layout-item size="12" padding="around-small">
+                                <lightning-layout multiple-rows="false" horizontal-align={horizontalAlign}>
+                                    <lightning-layout-item size="4" padding="around-small" class="advisor-column">
+                                        <img src={selectedAdvisor.Photo_URL__c} alt="Advisor Photo" class="advisor-photo"/>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="8" padding="around-small">
+                                        <div class="slds-m-top_xx-small"><b>Years of Experience:</b> {selectedAdvisor.Years_of_Experience__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Investment Philosophy:</b> {selectedAdvisor.Investment_Philosophy__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Customised Approach:</b> {selectedAdvisor.Customised_Approach__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Awards and Recognitions:</b> {selectedAdvisor.Awards_and_Recognitions__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Personal Interests:</b> {selectedAdvisor.Personal_Interests__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Community Involvement:</b> {selectedAdvisor.Community_Involvement__c}</div>
+                                        <div class="slds-m-top_xx-small"><b>Designations:</b></div>
+                                        <div class="slds-m-top_xx-small">
+                                            <template for:each={selectedAdvisor.designationsArray} for:item="designation">
+                                                <span key={designation} class="slds-badge slds-var-m-bottom_x-small">{designation}</span>
+                                            </template>
+                                        </div>
+                                        <div class="slds-m-top_xx-small"><b>Specialisations:</b></div>
+                                        <div>
+                                            <template for:each={selectedAdvisor.specialisationsArray} for:item="specialisation">
+                                                <span key={specialisation} class="slds-badge slds-var-m-bottom_x-small">{specialisation}</span>
+                                            </template>
+                                        </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick={handleCloseModal}>Close</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </div>
+</template>

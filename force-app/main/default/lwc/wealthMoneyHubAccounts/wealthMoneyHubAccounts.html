@@ -1,0 +1,204 @@
+<template>
+
+    <div class="slds-m-around_medium">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-var-p-around_x-small">
+                <article class="slds-card">
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                    <lightning-icon icon-name="standard:capacity_plan"></lightning-icon>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <div class="slds-text-heading_large slds-m-vertical_x-small">Totals</div>
+                                </h2>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        <div class="slds-m-around_medium">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-small-size_1-of-1 slds-var-p-around_xxx-small">
+                                    <article class="slds-card">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <lightning-layout-item size="12" padding="around-small">
+                                                <div class="slds-text-heading_small">Total Accounts</div>
+                                                <div class="slds-text-heading_large">{combinedNumberOfAccounts}</div>
+                                                <div class="slds-text-heading_small">Total Value of All Accounts</div>
+                                                <div class="slds-text-heading_large"><lightning-formatted-number value={combinedTotalBalance}></lightning-formatted-number></div>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-small-size_1-of-1 slds-var-p-around_xxx-small">
+                                    <article class="slds-card">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <lightning-layout-item size="12" padding="around-small">
+                                                <div class="slds-text-heading_small">Total Cash Accounts</div>
+                                                <div class="slds-text-heading_large">{numberOfCashAccounts}</div>
+                                                <div class="slds-text-heading_small">Total Cash Balance</div>
+                                                <div class="slds-text-heading_large"><lightning-formatted-number value={totalCashBalance}></lightning-formatted-number></div>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-small-size_1-of-1 slds-var-p-around_xxx-small">
+                                    <article class="slds-card">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <lightning-layout-item size="12" padding="around-small">
+                                                <div class="slds-text-heading_small">Total Pension & Investment Accounts</div>
+                                                <div class="slds-text-heading_large">{numberOfPensionAndInvestmentsAccounts}</div>
+                                                <div class="slds-text-heading_small">Total Pension & Investment Value</div>
+                                                <div class="slds-text-heading_large"><lightning-formatted-number value={totalPensionAndInvestmentsBalance}></lightning-formatted-number></div>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-small-size_1-of-1 slds-var-p-around_xxx-small">
+                                    <article class="slds-card">
+                                        <div class="slds-card__body slds-card__body_inner">
+                                            <lightning-layout-item size="12" padding="around-small">
+                                                <div class="slds-text-heading_small">Total Assets</div>
+                                                <div class="slds-text-heading_large">{numberOfAssetsAccounts}</div>
+                                                <div class="slds-text-heading_small">Total Assets Value</div>
+                                                <div class="slds-text-heading_large"><lightning-formatted-number value={totalAssetsBalance}></lightning-formatted-number></div>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+<template if:true={mockAccountResponse}>
+    <div class="slds-m-around_medium">
+        <lightning-layout multiple-rows="true" horizontal-align={horizontalAlign}>
+            <template for:each={mockAccountResponse} for:item="account">
+                <lightning-layout-item key={account.id} size={accountColumnSize} class="slds-col slds-var-p-around_xx-small">
+                    <article class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                        <lightning-icon icon-name="standard:expense"></lightning-icon>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <div class="slds-text-heading_large slds-m-vertical_x-small">{account.accountName}</div>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <lightning-layout-item size="12" padding="around-small">
+                                <div class="slds-m-top_xx-small"><b>Account Holder Name: </b>{account.accountHolderName}</div>
+                                <div class="slds-m-top_xx-small"><b>Balance: </b><lightning-formatted-number value={account.balance.amount.value}></lightning-formatted-number> {account.balance.amount.currency}</div>
+                                <div class="slds-m-top_xx-small"><b>Sort Code and Account Number: </b>{account.details.sortCodeAccountNumber}</div>
+                                <div class="slds-m-top_xx-small"><b>IBAN: </b>{account.details.iban}</div>
+                                <div class="slds-grid slds-grid_align-spread slds-m-top_small">
+                                    <button class="slds-button slds-button_brand" data-id={account.id} onclick={handleSeeMore}>
+                                        See more
+                                    </button>
+                                    <lightning-input type="checkbox-button" label="Select" data-id={account.id} onchange={handleCheckboxChange}></lightning-input>
+                                </div>
+                            </lightning-layout-item>
+                        </div>    
+                    </article> 
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>
+
+<template if:true={mockPensionAndInvestmentsResponse}>
+    <div class="slds-m-around_medium">
+        <lightning-layout multiple-rows="true" horizontal-align={horizontalAlign}>
+            <template for:each={mockPensionAndInvestmentsResponse} for:item="account">
+                <lightning-layout-item key={account.id} size={accountColumnSize} class="slds-col slds-var-p-around_xx-small">
+                    <article class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                        <lightning-icon icon-name="standard:partner_marketing_budget"></lightning-icon>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <div class="slds-text-heading_large slds-m-vertical_x-small">{account.accountName}</div>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <lightning-layout-item size="12" padding="around-small">
+                                <div class="slds-m-top_xx-small"><b>Account Holder Name: </b>{account.accountHolderName}</div>
+                                <div class="slds-m-top_xx-small"><b>Provider Name: </b>{account.providerName}</div>
+                                <div class="slds-m-top_xx-small"><b>Balance: </b><lightning-formatted-number value={account.balance.amount.value}></lightning-formatted-number> {account.balance.amount.currency}</div>
+                                <div class="slds-m-top_xx-small"><b>Annualised Growth Rate: </b><lightning-formatted-number value={account.performanceScore.totals.annualisedGrowthRate} maximum-fraction-digits="3"></lightning-formatted-number> {account.balance.amount.currency}</div>
+                                <div class="slds-grid slds-grid_align-spread slds-m-top_small">
+                                    <button class="slds-button slds-button_brand" data-id={account.id} onclick={handleSeeMore}>
+                                        See more
+                                    </button>
+                                    <lightning-input type="checkbox-button" label="Select" data-id={account.id} onchange={handleCheckboxChange}></lightning-input>
+                                </div>
+                            </lightning-layout-item>
+                        </div>    
+                    </article>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>
+
+<template if:true={mockAssetsResponse}>
+    <div class="slds-m-around_medium">
+        <lightning-layout multiple-rows="true" horizontal-align={horizontalAlign}>
+            <template for:each={mockAssetsResponse} for:item="account">
+                <lightning-layout-item key={account.id} size={accountColumnSize} class="slds-col slds-var-p-around_xx-small">
+                    <article class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                        <lightning-icon icon-name="standard:home"></lightning-icon>
+                                    </span>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <div class="slds-text-heading_large slds-m-vertical_x-small">{account.accountName}</div>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <lightning-layout-item size="12" padding="around-small">
+                                <div class="slds-m-top_xx-small"><b>Balance: </b><lightning-formatted-number value={account.balance.amount.value}></lightning-formatted-number> {account.balance.amount.currency}</div>
+                                <div class="slds-m-top_xx-small"><b>Type: </b>{account.type}</div>
+                                <div class="slds-grid slds-grid_align-spread slds-m-top_small">
+                                    <button class="slds-button slds-button_brand" data-id={account.id} onclick={handleSeeMore}>
+                                        See more
+                                    </button>
+                                    <lightning-input type="checkbox-button" label="Select" data-id={account.id} onchange={handleCheckboxChange}></lightning-input>
+                                </div>
+                            </lightning-layout-item>
+                        </div>    
+                    </article>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>
+
+<template if:true={error}>
+    <p>Error: {error.message}</p>
+</template>
+</template>

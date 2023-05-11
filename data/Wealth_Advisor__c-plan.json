@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Wealth_Advisor__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Wealth_Advisor__cs.json"
+        ]
+    }
+]

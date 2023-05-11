@@ -1,0 +1,28 @@
+.advisor-photo {
+    border-radius: 50%;
+    max-width: 100px; /* Adjust the max-width as needed */
+    max-height: 100px; /* Adjust the max-height as needed */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 5px solid rgb(231, 33, 105);
+}
+
+.advisor-column {
+    min-height: 400px; /* Adjust this value to your desired minimum height */
+}
+
+button.slds-button_brand {
+    /* 
+        Example using Styling Hooks to override the look of a standard component (RECOMMENDED)
+        https://www.lightningdesignsystem.com/components/buttons/#Styling-Hooks-Overview 
+    */
+    --slds-c-button-brand-color-border: rgb(231, 33, 105);
+    --slds-c-button-brand-color-background: rgb(231, 33, 105);
+    --slds-c-button-brand-color-background-hover:  white;
+    --slds-c-button-brand-text-color: white;
+    --slds-c-button-brand-text-color-hover: rgb(231, 33, 105);
+    --slds-c-button-radius-border: 0.25rem;
+}
+

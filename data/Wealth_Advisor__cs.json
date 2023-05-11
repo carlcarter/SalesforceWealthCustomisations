@@ -1,0 +1,116 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef1"
+            },
+            "Name": "John Doe",
+            "Years_of_Experience__c": 15,
+            "Community_Involvement__c": "John is an active member of his community and volunteers regularly at the local food bank. He also serves on the board of a local charity that supports underprivileged children.",
+            "Awards_and_Recognitions__c": "John has received the Wealth Management Advisor of the Year award three times and has been recognised as a Top Performer at SPW for the past five years.",
+            "Customised_Approach__c": "John takes the time to understand each client's unique financial goals and creates tailored investment strategies to help them achieve their objectives. He prioritises long-term relationships and places great emphasis on open communication.",
+            "Investment_Philosophy__c": "John believes in a diversified investment approach that balances risk and reward. He focuses on long-term growth and incorporates both passive and active investment strategies to help clients build and protect their wealth.",
+            "Personal_Interests__c": "In his spare time, John enjoys hiking, playing golf, and spending time with his family. He is also an avid reader and loves to travel.",
+            "Professional_Designations__c": "Certified Private Wealth Advisor (CPWA)",
+            "Specialisations__c": "Estate Planning;Investment Management;Tax Planning",
+            "Photo_URL__c": "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef2"
+            },
+            "Name": "Jane Smith",
+            "Years_of_Experience__c": 12,
+            "Community_Involvement__c": "Jane actively participates in her community by volunteering at the local animal shelter and mentoring young entrepreneurs. She also supports several environmental organisations and initiatives.",
+            "Awards_and_Recognitions__c": "Jane has been recognised as a Top 10 Wealth Advisor in her region and has received multiple performance awards within her firm.",
+            "Customised_Approach__c": "Jane is dedicated to understanding her clients' financial goals and tailoring investment strategies to meet their specific needs. She is committed to building long-lasting relationships with her clients through transparent communication and personalised service.",
+            "Investment_Philosophy__c": "Jane's investment philosophy emphasizes a diversified and disciplined approach to wealth management. She combines strategic asset allocation with tactical investment decisions to help clients optimise their portfolios and minimise risk.",
+            "Personal_Interests__c": "Outside of work, Jane enjoys hiking, practicing yoga, and exploring new cuisines. She is an avid traveler and loves learning about different cultures and traditions.",
+            "Professional_Designations__c": "Chartered Financial Analyst (CFA)",
+            "Specialisations__c": "Estate Planning;Investment Management;Philanthropic Strategies;Risk Management;Tax Planning",
+            "Photo_URL__c": "https://images.pexels.com/photos/7626615/pexels-photo-7626615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef3"
+            },
+            "Name": "Daniel Miller",
+            "Years_of_Experience__c": 20,
+            "Community_Involvement__c": "Daniel actively participates in his community by volunteering at local non-profit organisations and supporting various environmental and social causes.",
+            "Awards_and_Recognitions__c": "Daniel has been recognised as a Top 10 Wealth Advisor in his region and has received multiple performance awards within his firm.",
+            "Customised_Approach__c": "Daniel is dedicated to understanding his clients' financial objectives and tailoring investment strategies to meet their individual needs. He is committed to building lasting relationships with his clients through open communication and exceptional service.",
+            "Investment_Philosophy__c": "Daniel's investment philosophy focuses on a diversified and disciplined approach to wealth management. He combines strategic asset allocation with tactical investment decisions to help clients optimise their portfolios and minimise risk.",
+            "Personal_Interests__c": "Outside of work, Daniel enjoys hiking, playing tennis, and traveling. He is an avid reader and loves exploring new cultures and traditions.",
+            "Professional_Designations__c": "Certified Private Wealth Advisor (CPWA)",
+            "Specialisations__c": "Estate Planning;Investment Management;Tax Planning",
+            "Photo_URL__c": "https://images.pexels.com/photos/8000595/pexels-photo-8000595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef4"
+            },
+            "Name": "Sarah Taylor",
+            "Years_of_Experience__c": 8,
+            "Community_Involvement__c": "Sarah is an active member of her community, volunteering at a local children's hospital and supporting various educational initiatives. She also contributes to environmental conservation efforts.",
+            "Awards_and_Recognitions__c": "Sarah has been recognised as a Rising Star Wealth Advisor and has received accolades for her dedication to her clients.",
+            "Customised_Approach__c": "Sarah is committed to understanding her clients' financial aspirations and crafting investment strategies to fulfil their specific requirements. She believes in nurturing long-lasting relationships with her clients through honest communication and personalised service.",
+            "Investment_Philosophy__c": "Sarah's investment philosophy emphasizes a thorough and disciplined approach to wealth management. She utilises a mix of strategic asset allocation and tactical investment decisions to help clients optimise their portfolios while minimising risk.",
+            "Personal_Interests__c": "In her free time, Sarah enjoys spending time with her family, running, and exploring new cuisines. She is an enthusiastic traveler and loves learning about different cultures.",
+            "Professional_Designations__c": "Chartered Financial Analyst (CFA)",
+            "Specialisations__c": "Investment Management",
+            "Photo_URL__c": "https://images.pexels.com/photos/6953859/pexels-photo-6953859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef5"
+            },
+            "Name": "Michael Davis",
+            "Years_of_Experience__c": 17,
+            "Community_Involvement__c": "Michael actively engages in community work, volunteering with local youth organisations and supporting environmental conservation initiatives. He also contributes to various charities and non-profit organisations.",
+            "Awards_and_Recognitions__c": "Michael has been acknowledged as a Top 3 Wealth Advisor in his region and has received numerous accolades for his dedication to his clients and their financial success.",
+            "Customised_Approach__c": "Michael takes the time to fully comprehend each client's financial objectives and creates customised investment plans accordingly. He is dedicated to maintaining strong relationships with his clients through transparent communication and exceptional service.",
+            "Investment_Philosophy__c": "Michael's investment philosophy centers around a methodical and diversified approach to wealth management. He employs a mix of strategic asset allocation and tactical investment decisions to help clients enhance their portfolios while minimising risk.",
+            "Personal_Interests__c": "Outside of work, Michael is an avid golfer and enjoys spending time with his family. He also loves traveling and learning about different cultures and customs.",
+            "Professional_Designations__c": "Certified Financial Planner (CFP)",
+            "Specialisations__c": "Risk Management;Tax Planning",
+            "Photo_URL__c": "https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef6"
+            },
+            "Name": "Emily Brown",
+            "Years_of_Experience__c": 14,
+            "Community_Involvement__c": "Emily is involved in her community as a volunteer for a local food bank and a supporter of various educational initiatives. She also serves on the board of a non-profit organisation.",
+            "Awards_and_Recognitions__c": "Emily has been recognised as a Top 5 Wealth Advisor in her region and has earned several accolades for her commitment to client service.",
+            "Customised_Approach__c": "Emily focuses on understanding each client's unique financial situation and works closely with them to develop tailored investment strategies. She believes in fostering long-term relationships through open communication and exceptional service.",
+            "Investment_Philosophy__c": "Emily's investment philosophy emphasises a balanced and disciplined approach to wealth management. She uses a combination of strategic asset allocation and tactical investment decisions to help clients maximise returns while minimising risk.",
+            "Personal_Interests__c": "In her free time, Emily enjoys spending time with her family, cycling, and reading. She is passionate about the arts and supports local galleries and museums.",
+            "Professional_Designations__c": "Certified Private Wealth Advisor (CPWA)",
+            "Specialisations__c": "Estate Planning;Investment Management",
+            "Photo_URL__c": "https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        {
+            "attributes": {
+                "type": "Wealth_Advisor__c",
+                "referenceId": "Wealth_Advisor__cRef7"
+            },
+            "Name": "Natalie Jackson",
+            "Years_of_Experience__c": 11,
+            "Community_Involvement__c": "Natalie is involved in her community as a volunteer for a local food bank and a supporter of various educational initiatives. She also serves on the board of a non-profit organisation.",
+            "Awards_and_Recognitions__c": "Natalie has been acknowledged as a Top 10 Wealth Advisor in her region and has earned several accolades for her commitment to client service.",
+            "Customised_Approach__c": "Natalie focuses on understanding each client's unique financial situation and works closely with them to develop tailored investment strategies. She believes in fostering long-term relationships through open communication and exceptional service.",
+            "Investment_Philosophy__c": "Natalie's investment philosophy emphasises a balanced and disciplined approach to wealth management. She uses a combination of strategic asset allocation and tactical investment decisions to help clients maximise returns while minimising risk.",
+            "Personal_Interests__c": "In her free time, Natalie enjoys spending time with her family, cycling, and reading. She is passionate about the arts and supports local galleries and museums.",
+            "Professional_Designations__c": "Certified Financial Planner (CFP)",
+            "Specialisations__c": "Investment Management;Philanthropic Strategies",
+            "Photo_URL__c": "https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+    ]
+}
