@@ -1,0 +1,44 @@
+{
+  "0Af8d00000R7renCAB": {
+    "target-org": "carlcarter@carlcarter-220620-ido.demo",
+    "dry-run": false,
+    "ignore-conflicts": false,
+    "ignore-errors": false,
+    "ignore-warnings": false,
+    "test-level": "NoTestRun",
+    "api": "SOAP",
+    "manifest": "/Users/carl.carter/.sf/manifestCache/0Af8d00000R7renCAB.xml",
+    "wait": 33,
+    "isMdapi": false,
+    "timestamp": "2023-05-11T14:05:15.758Z",
+    "status": "Failed"
+  },
+  "0Af8d00000R7rjPCAR": {
+    "target-org": "carlcarter@carlcarter-220620-ido.demo",
+    "dry-run": false,
+    "ignore-conflicts": false,
+    "ignore-errors": false,
+    "ignore-warnings": false,
+    "test-level": "NoTestRun",
+    "api": "SOAP",
+    "manifest": "/Users/carl.carter/.sf/manifestCache/0Af8d00000R7rjPCAR.xml",
+    "wait": 33,
+    "isMdapi": false,
+    "timestamp": "2023-05-11T14:06:57.419Z",
+    "status": "Succeeded"
+  },
+  "0Af8d00000R7ruZCAR": {
+    "target-org": "carlcarter@carlcarter-220620-ido.demo",
+    "dry-run": false,
+    "ignore-conflicts": false,
+    "ignore-errors": false,
+    "ignore-warnings": false,
+    "test-level": "NoTestRun",
+    "api": "SOAP",
+    "manifest": "/Users/carl.carter/.sf/manifestCache/0Af8d00000R7ruZCAR.xml",
+    "wait": 33,
+    "isMdapi": false,
+    "timestamp": "2023-05-11T14:21:26.578Z",
+    "status": "Succeeded"
+  }
+}
