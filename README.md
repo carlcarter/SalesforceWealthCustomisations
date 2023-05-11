@@ -49,7 +49,7 @@ Either add the cc_wealthAdvisorsGrid to an Aura page or wealthAdvisorsGrid compo
 ```
 ./classes/wealthMoneyHubAPIMock.cls
 ./lwc/wealthMoneyHubAccounts
-./permissionsets/wealthMoneyHubAccounts
+./permissionsets/WealthMoneyHub
 ./aura/cc_wealthMoneyHubMock/  // just a shell component for adding the LWC to an Aura page/site
 ```
 
@@ -63,7 +63,7 @@ sfdx project deploy start -o <targetorg>
 
 ### 2. Grant permissions
 
-Apply the wealthMoneyHubAccounts permission set to the appropriate users
+Apply the WealthMoneyHub permission set to the appropriate users
 
 ### 3. Add the Component
 
